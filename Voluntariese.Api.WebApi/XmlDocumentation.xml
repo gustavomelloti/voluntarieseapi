@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Voluntariese.Api.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.ArquivosController.Upload(Voluntariese.Api.Aplicacao.Arquivos.Requests.UploadArquivoRequest)">
+            <summary>
+            Endpoint de upload de arquivos.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.ArquivosController.Download(System.Int64)">
+            <summary>
+            Endpoint de download de arquivos.
+            </summary>
+            <param name="id"></param>
+            <returns>O Arquivo</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.AutenticacaoController.Login(Voluntariese.Api.Aplicacao.Autenticacao.Requests.LoginRequest)">
+            <summary>
+            Endpoint de login.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.AutenticacaoController.Info">
+            <summary>
+            Endpoint de informações do usuário autenticado.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.AutenticacaoController.SolicitarRecuperacaoSenha(Voluntariese.Api.Aplicacao.Autenticacao.Requests.SolicitarRecuperacaoSenhaRequest)">
+            <summary>
+            Endpoint de solicitação da recuperação de senha.
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.AutenticacaoController.ValidarTokenRecuperacaoSenha(System.String)">
+            <summary>
+            Endpoint de validação do token de recuperação de senha.
+            </summary>
+            <param name="token"></param>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.AutenticacaoController.RecuperarSenha(System.String,Voluntariese.Api.Aplicacao.Autenticacao.Requests.RecuperarSenhaRequest)">
+            <summary>
+            Endpoint de recuperação de senha.
+            </summary>
+            <param name="token"></param>
+            <param name="request"></param>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.CausasController.Consultar">
+            <summary>
+            Endpoint para consultar as causas atendidas.
+            </summary>
+            <returns>as causas</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.ContatosController.Cadastrar(Voluntariese.Api.Aplicacao.Contatos.Requests.CadastrarContatoRequest)">
+            <summary>
+            Endpoint para cadastrar contatos realizados pelo site.
+            </summary>
+            <param name="request"></param>
+            <returns>O contato</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.DoacoesController.Cadastrar(Voluntariese.Api.Aplicacao.Doacoes.Requests.CadastrarDoacaoRequest)">
+            <summary>
+            Endpoint para cadastrar doações.
+            </summary>
+            <param name="request"></param>
+            <returns>A doação</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.DoacoesController.Consultar(System.Nullable{System.Int64})">
+            <summary>
+            Endpoint para consultar doações.
+            </summary>
+            <returns>as Doações</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.DoacoesController.ConsultarInsituicoes">
+            <summary>
+            Endpoint para consultar doações de uma instituição.
+            </summary>
+            <returns>as Doações</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.DoacoesController.Atualizar(System.Int64,Voluntariese.Api.Aplicacao.Doacoes.Models.AtualizarDoacaoRequest)">
+            <summary>
+            Endpoint para atualizar doações.
+            </summary>
+            <returns>a doação</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.OportunidadesController.Consultar(System.Nullable{System.Int64})">
+            <summary>
+            Endpoint para consultar as oportunidades.
+            </summary>
+            <returns>As oportunidades</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.OportunidadesController.ConsultarDeInsituicoes">
+            <summary>
+            Endpoint para consultar as oportunidades de uma instituição.
+            </summary>
+            <returns>As oportunidades</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.OportunidadesController.ConsultarDeVoluntarios">
+            <summary>
+            Endpoint para consultar as oportunidades de um voluntário.
+            </summary>
+            <returns>As oportunidades</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.OportunidadesController.Cadastrar(Voluntariese.Api.Aplicacao.Oportunidades.Requests.CadastrarOportunidadeRequest)">
+            <summary>
+            Endpoint para cadastrar oportunidade.
+            </summary>
+            <returns>A oportunidade criada</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.OportunidadesController.Atualizar(System.Int64,Voluntariese.Api.Aplicacao.Oportunidades.Requests.AtualizarOportunidadeRequest)">
+            <summary>
+            Endpoint para atualizar oportunidade.
+            </summary>
+            <returns>A oportunidade atualizada</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.OportunidadesController.Candidatar(System.Int64)">
+            <summary>
+            Endpoint para candidatar-se a oportunidade.
+            </summary>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.OportunidadesController.Aprovar(System.Int64)">
+            <summary>
+            Endpoint para aprovar candidatura.
+            </summary>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.OportunidadesController.Reprovar(System.Int64,Voluntariese.Api.Aplicacao.Oportunidades.Requests.ReprovarCandidaturaRequest)">
+            <summary>
+            Endpoint para reprovar candidatura.
+            </summary>
+        </member>
+        <member name="P:Voluntariese.Api.WebApi.Middlewares.Auth.TokenProviderOptions.Path">
+            <summary>
+            The relative request path to listen on.
+            </summary>
+            <remarks>The default path is <c>/token</c>.</remarks>
+        </member>
+        <member name="P:Voluntariese.Api.WebApi.Middlewares.Auth.TokenProviderOptions.Issuer">
+            <summary>
+             The Issuer (iss) claim for generated tokens.
+            </summary>
+        </member>
+        <member name="P:Voluntariese.Api.WebApi.Middlewares.Auth.TokenProviderOptions.Audience">
+            <summary>
+            The Audience (aud) claim for the generated tokens.
+            </summary>
+        </member>
+        <member name="P:Voluntariese.Api.WebApi.Middlewares.Auth.TokenProviderOptions.Expiration">
+            <summary>
+            The expiration time for the generated tokens.
+            </summary>
+            <remarks>The default is five minutes (300 seconds).</remarks>
+        </member>
+        <member name="P:Voluntariese.Api.WebApi.Middlewares.Auth.TokenProviderOptions.SigningCredentials">
+            <summary>
+            The signing key to use when generating tokens.
+            </summary>
+        </member>
+        <member name="P:Voluntariese.Api.WebApi.Middlewares.Auth.TokenProviderOptions.IdentityResolver">
+            <summary>
+            Resolves a user identity given a username and password.
+            </summary>
+        </member>
+        <member name="P:Voluntariese.Api.WebApi.Middlewares.Auth.TokenProviderOptions.NonceGenerator">
+            <summary>
+            Generates a random value (nonce) for each generated token.
+            </summary>
+            <remarks>The default nonce is a random GUID.</remarks>
+        </member>
+        <member name="M:Labsit.Api.WebApi.Controllers.UsuariosController.Cadastrar(Voluntariese.Api.Aplicacao.Usuarios.Requests.CadastrarUsuarioRequest)">
+            <summary>
+            Endpoint de cadastro de novos usuários.
+            </summary>
+            <param name="request"></param>
+            <returns>O usuário cadastrado</returns>
+        </member>
+        <member name="M:Labsit.Api.WebApi.Controllers.UsuariosController.Atualizar(Voluntariese.Api.Aplicacao.Usuarios.Requests.AtualizarUsuarioRequest)">
+            <summary>
+            Endpoint de atualização dos dados do usuário autenticado.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Labsit.Api.WebApi.Controllers.UsuariosController.AtualizarSenha(Voluntariese.Api.Aplicacao.Usuarios.Requests.AtualizarSenhaRequest)">
+            <summary>
+            Endpoint de atualização de senha do usuário logado.
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Labsit.Api.WebApi.Controllers.UsuariosController.ConsultarVoluntarios(System.Nullable{System.Int64})">
+            <summary>
+            Endpoint para buscar voluntários.
+            </summary>
+            <returns>os voluntários</returns>
+        </member>
+    </members>
+</doc>

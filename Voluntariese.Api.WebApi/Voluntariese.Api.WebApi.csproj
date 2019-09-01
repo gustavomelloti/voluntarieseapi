@@ -1,0 +1,498 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>85e3c0b0-e67f-4be0-82e4-2e75dc145060</UserSecretsId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>XmlDocumentation.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>XmlDocumentation.xml</DocumentationFile>
+    <OutputPath>
+    </OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="XmlDocumentation.xml\**" />
+    <Content Remove="XmlDocumentation.xml\**" />
+    <EmbeddedResource Remove="XmlDocumentation.xml\**" />
+    <None Remove="XmlDocumentation.xml\**" />
+    <Compile Remove="wwwroot\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="wwwroot\**" />
+    <Content Remove="wwwroot\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.1916590" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="appsettings.Development.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\.DS_Store">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\asset-manifest.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\.DS_Store">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\banners\banner.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\.DS_Store">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\arrow-back%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\arrow-back%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\arrow-back.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\arrow-down%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\arrow-down%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\arrow-down.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\arrow-next.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\arrow-prev.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\arrow-send%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\arrow-send%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\arrow-send.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\basket%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\basket%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\basket.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\calendar%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\calendar%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\calendar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\camera%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\camera%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\camera.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\cart%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\cart%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\cart-white%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\cart-white%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\cart-white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\cart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\contact%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\contact%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\contact.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\exclamation%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\exclamation%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\exclamation.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\eye%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\eye%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\eye.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\facebook%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\facebook%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\facebook.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\heart%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\heart%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\instagram%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\instagram%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\instagram.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\labsit%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\labsit%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\labsit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\pdf%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\pdf%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\pdf.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\phone%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\phone%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\phone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\search%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\search%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\search-2%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\search-2%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\search-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\search.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\select-row%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\select-row.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\select-row3x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\syringe%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\syringe%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\syringe-2%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\syringe-2%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\syringe-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\syringe.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\upload%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\upload%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\upload.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\user%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\user%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\user.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\whatsapp%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\whatsapp%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\icons\whatsapp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\logo%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\logo%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\vacina%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\vacina%403x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\img\vacina.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\manifest.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\precache-manifest.1f6f5e266bd7cff800a90bad076d694e.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\service-worker.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\static\css\1.b7c97abb.chunk.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\static\css\1.b7c97abb.chunk.css.map">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\static\css\main.8cd476dc.chunk.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\static\css\main.8cd476dc.chunk.css.map">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\static\js\1.185dd279.chunk.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\static\js\main.3fc7013c.chunk.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\static\js\runtime~main.229c360f.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\static\media\glyphicons-halflings-regular.448c34a5.woff2">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\static\media\glyphicons-halflings-regular.89889688.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\static\media\glyphicons-halflings-regular.e18bbf61.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\static\media\glyphicons-halflings-regular.f4769f9b.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\static\media\glyphicons-halflings-regular.fa277232.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\static\media\slick.b7c9e1e4.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\static\media\slick.ced611da.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\static\media\slick.d41f55a7.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\static\media\slick.f97e3bbf.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Voluntariese.Api.WebApi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="XmlDocumentation.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\.DS_Store" />
+    <_ContentIncludedByDefault Remove="wwwroot\asset-manifest.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\favicon.ico" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\.DS_Store" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\banners\banner.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\.DS_Store" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\arrow-back.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\arrow-back@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\arrow-back@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\arrow-down.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\arrow-down@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\arrow-down@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\arrow-next.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\arrow-prev.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\arrow-send.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\arrow-send@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\arrow-send@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\basket.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\basket@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\basket@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\calendar.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\calendar@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\calendar@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\camera.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\camera@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\camera@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\cart-white.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\cart-white@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\cart-white@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\cart.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\cart@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\cart@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\contact.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\contact@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\contact@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\exclamation.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\exclamation@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\exclamation@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\eye.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\eye@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\eye@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\facebook.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\facebook@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\facebook@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\heart.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\heart@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\heart@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\instagram.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\instagram@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\instagram@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\labsit.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\labsit@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\labsit@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\pdf.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\pdf@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\pdf@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\phone.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\phone@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\phone@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\search-2.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\search-2@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\search-2@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\search.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\search@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\search@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\select-row.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\select-row3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\select-row@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\syringe-2.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\syringe-2@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\syringe-2@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\syringe.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\syringe@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\syringe@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\upload.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\upload@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\upload@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\user.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\user@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\user@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\whatsapp.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\whatsapp@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\icons\whatsapp@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\logo.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\logo@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\logo@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\vacina.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\vacina@2x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\img\vacina@3x.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\index.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\manifest.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\precache-manifest.1f6f5e266bd7cff800a90bad076d694e.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\precache-manifest.a8b5f8bcd51c2a27014d178910d58778.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\service-worker.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\css\1.b7c97abb.chunk.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\css\1.b7c97abb.chunk.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\css\main.8cd476dc.chunk.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\css\main.8cd476dc.chunk.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\js\1.185dd279.chunk.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\js\1.185dd279.chunk.js.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\js\main.638f6939.chunk.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\js\main.638f6939.chunk.js.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\js\runtime~main.229c360f.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\js\runtime~main.229c360f.js.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\media\glyphicons-halflings-regular.448c34a5.woff2" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\media\glyphicons-halflings-regular.89889688.svg" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\media\glyphicons-halflings-regular.e18bbf61.ttf" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\media\glyphicons-halflings-regular.f4769f9b.eot" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\media\glyphicons-halflings-regular.fa277232.woff" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\media\slick.b7c9e1e4.woff" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\media\slick.ced611da.eot" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\media\slick.d41f55a7.ttf" />
+    <_ContentIncludedByDefault Remove="wwwroot\static\media\slick.f97e3bbf.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Voluntariese.Api.InjecaoDependencia\Voluntariese.Api.InjecaoDependencia.csproj" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties appsettings_1json__JSONSchema="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

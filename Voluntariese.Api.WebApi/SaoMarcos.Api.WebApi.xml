@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Voluntariese.Api.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.ArquivosController.Upload(Voluntariese.Api.Aplicacao.Arquivos.Requests.UploadArquivoRequest)">
+            <summary>
+            Endpoint de upload de arquivos.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.ArquivosController.Download(System.Int64)">
+            <summary>
+            Endpoint de download de arquivos.
+            </summary>
+            <param name="id"></param>
+            <returns>O Arquivo</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.AutenticacaoController.Login(Voluntariese.Api.Aplicacao.Autenticacao.Requests.LoginRequest)">
+            <summary>
+            Endpoint de login.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.AutenticacaoController.Info">
+            <summary>
+            Endpoint de informações do usuário autenticado.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.AutenticacaoController.SolicitarRecuperacaoSenha(Voluntariese.Api.Aplicacao.Autenticacao.Requests.SolicitarRecuperacaoSenhaRequest)">
+            <summary>
+            Endpoint de solicitação da recuperação de senha.
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.AutenticacaoController.ValidarTokenRecuperacaoSenha(System.String)">
+            <summary>
+            Endpoint de validação do token de recuperação de senha.
+            </summary>
+            <param name="token"></param>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.AutenticacaoController.RecuperarSenha(System.String,Voluntariese.Api.Aplicacao.Autenticacao.Requests.RecuperarSenhaRequest)">
+            <summary>
+            Endpoint de recuperação de senha.
+            </summary>
+            <param name="token"></param>
+            <param name="request"></param>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.CarrinhoComprasController.Cadastrar(Voluntariese.Api.Aplicacao.CarrinhoCompras.Requests.CadastrarProdutoCarrinhoRequest)">
+            <summary>
+            Endpoint de cadastro de produto no carrinho de compras anônimo.
+            </summary>
+            <param name="request"></param>
+            <returns>O carrinho de compras gerado</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.CarrinhoComprasController.AdicionarProduto(Voluntariese.Api.Aplicacao.CarrinhoCompras.Requests.CadastrarProdutoCarrinhoRequest,System.Int64)">
+            <summary>
+            Endpoint de cadastro de produto no carrinho de compras informado.
+            </summary>
+            <param name="request"></param>
+            <param name="idCarrinho"></param>
+            <returns>O carrinho de compras</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.CarrinhoComprasController.AdicionarProduto(System.Int64)">
+            <summary>
+            Endpoint para realizar o vínculo de um carrinho anônimo com o usuário logado.
+            </summary>
+            <param name="idCarrinho"></param>
+            <returns>O carrinho de compras</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.CarrinhoComprasController.RemoverProduto(System.Int64,System.Int64)">
+            <summary>
+            Endpoint para remover um produto do carrinho
+            </summary>
+            <param name="idCarrinho"></param>
+            <param name="idProduto"></param>
+            <returns>O carrinho sem o produto</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.CategoriasController.Consultar(System.Nullable{System.Int64})">
+            <summary>
+            Endpoint de consulta de categorias ativas.
+            </summary>
+            <returns>Lista de categorias</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.CategoriasController.Obter(System.Int64)">
+            <summary>
+            Endpoint de detalhes de categorias.
+            </summary>
+            <param name="id"></param>
+            <returns>A categoria detalhada</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.CepsController.Obter(System.String)">
+            <summary>
+            Endpoint para verificação de cep atendido.
+            </summary>
+            <param name="cep"></param>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.PedidosBackOfficeController.Obter(System.Int64)">
+            <summary>
+            Endpoint de consulta de pedido por id.
+            </summary>
+            <param name="idPedido"></param>
+            <returns>O pedido detalhado </returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.PedidosBackOfficeController.Obter(System.String)">
+            <summary>
+            Endpoint de consulta de pedidos.
+            </summary>
+            <param name="cpf"></param>
+            <returns>Os pedidos do usuário</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.PedidosBackOfficeController.AtualizarOrdemServico(System.Int64,System.String)">
+            <summary>
+            Endpoint para atualização da ordem de serviço de um pedido.
+            </summary>
+            <param name="idPedido"></param>
+            <param name="idOrdem"></param>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.PedidosBackOfficeController.AtualizarStatus(System.Int64,Voluntariese.Api.Dominio.Pedidos.Enums.PedidoStatus)">
+            <summary>
+            Endpoint para atualização do status do pedido.
+            </summary>
+            <param name="idPedido"></param>
+            <param name="status"></param>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.PedidosController.Cadastrar(System.Int64,Voluntariese.Api.Aplicacao.Pedidos.Requests.CadastrarPedidoRequest)">
+            <summary>
+            Endpoint de cadastro de pedido.
+            </summary>
+            <param name="idCarrinho"></param>
+            <param name="request"></param>
+            <returns>O pedido gerado </returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.PedidosController.CadastrarRecebedor(Voluntariese.Api.Aplicacao.Pedidos.Requests.CadastrarRecebedorRequest)">
+            <summary>
+            Endpoint de cadastro do recebedor.
+            </summary>
+            <param name="request"></param>
+            <returns>O Recebedor</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.PedidosController.CadastrarEnderecoEntrega(Voluntariese.Api.Aplicacao.Pedidos.Requests.CadastrarEnderecoEntregaRequest)">
+            <summary>
+            Endpoint de cadastro de endereço de entrega.
+            </summary>
+            <param name="request"></param>
+            <returns>O Endereço</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.PedidosController.Pagar(System.Int64,Voluntariese.Api.Aplicacao.Checkout.Pedidos.Requests.PagarPedidoComCartaoRequest)">
+            <summary>
+            Endpoint para pagamento do pedido.
+            </summary>
+            <param name="idPedido"></param>
+            <param name="request"></param>
+            <returns>O Pagamento</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.ProdutosController.Consultar(Voluntariese.Api.Aplicacao.Produtos.Requests.ConsultarProdutosRequest)">
+            <summary>
+            Endpoint de consulta de produtos ativos.
+            </summary>
+            <param name="request">Os parâmetros da consulta</param>
+            <returns>Lista de produtos</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.ProdutosController.Obter(System.Int64)">
+            <summary>
+            Endpoint de detalhes de produto.
+            </summary>
+            <param name="id"></param>
+            <returns>Detalhe do produto</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.UnidadesController.Consultar">
+            <summary>
+            Endpoint de consulta de unidades ativas.
+            </summary>
+            <returns>Lista das unidades</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.UnidadesController.Obter(System.Int64)">
+            <summary>
+            Endpoint de busca de unidade por código.
+            </summary>
+            <param name="id"></param>
+            <returns>A unidade</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.UnidadesController.ObterUnidadeDomicilio">
+            <summary>
+            Endpoint de busca de unidade domicílio.
+            </summary>
+            <returns>A unidade domicílio</returns>
+        </member>
+        <member name="M:Voluntariese.Api.WebApi.Controllers.UnidadesController.ObterEstoqueUnidade(System.Int64,System.Int64[])">
+            <summary>
+            Endpoint de busca do estoque dos produtos especificados com base na unidade
+            </summary>
+            <param name="idUnidade"></param>
+            <param name="idsProdutos"></param>
+            <returns>As informações de estoque da unidade</returns>
+        </member>
+        <member name="P:Voluntariese.Api.WebApi.Middlewares.Auth.TokenProviderOptions.Path">
+            <summary>
+            The relative request path to listen on.
+            </summary>
+            <remarks>The default path is <c>/token</c>.</remarks>
+        </member>
+        <member name="P:Voluntariese.Api.WebApi.Middlewares.Auth.TokenProviderOptions.Issuer">
+            <summary>
+             The Issuer (iss) claim for generated tokens.
+            </summary>
+        </member>
+        <member name="P:Voluntariese.Api.WebApi.Middlewares.Auth.TokenProviderOptions.Audience">
+            <summary>
+            The Audience (aud) claim for the generated tokens.
+            </summary>
+        </member>
+        <member name="P:Voluntariese.Api.WebApi.Middlewares.Auth.TokenProviderOptions.Expiration">
+            <summary>
+            The expiration time for the generated tokens.
+            </summary>
+            <remarks>The default is five minutes (300 seconds).</remarks>
+        </member>
+        <member name="P:Voluntariese.Api.WebApi.Middlewares.Auth.TokenProviderOptions.SigningCredentials">
+            <summary>
+            The signing key to use when generating tokens.
+            </summary>
+        </member>
+        <member name="P:Voluntariese.Api.WebApi.Middlewares.Auth.TokenProviderOptions.IdentityResolver">
+            <summary>
+            Resolves a user identity given a username and password.
+            </summary>
+        </member>
+        <member name="P:Voluntariese.Api.WebApi.Middlewares.Auth.TokenProviderOptions.NonceGenerator">
+            <summary>
+            Generates a random value (nonce) for each generated token.
+            </summary>
+            <remarks>The default nonce is a random GUID.</remarks>
+        </member>
+        <member name="M:Labsit.Api.WebApi.Controllers.UsuariosController.Cadastrar(Voluntariese.Api.Aplicacao.Usuarios.Requests.CadastrarUsuarioRequest)">
+            <summary>
+            Endpoint de cadastro de novos usuários.
+            </summary>
+            <param name="request"></param>
+            <returns>O usuário cadastrado</returns>
+        </member>
+        <member name="M:Labsit.Api.WebApi.Controllers.UsuariosController.Atualizar(Voluntariese.Api.Aplicacao.Usuarios.Requests.AtualizarUsuarioRequest)">
+            <summary>
+            Endpoint de atualização dos dados do usuário autenticado.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Labsit.Api.WebApi.Controllers.UsuariosController.AtualizarSenha(Voluntariese.Api.Aplicacao.Usuarios.Requests.AtualizarSenhaRequest)">
+            <summary>
+            Endpoint de atualização de senha do usuário logado.
+            </summary>
+            <param name="request"></param>
+        </member>
+    </members>
+</doc>

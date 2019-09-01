@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Causa]
+(
+	[Id] BIGINT NOT NULL PRIMARY KEY IDENTITY, 
+    [Descricao] VARCHAR(80) NOT NULL, 
+    [Icone] VARCHAR(20) NOT NULL, 
+    [Ativo] BIT NOT NULL DEFAULT 1
+)

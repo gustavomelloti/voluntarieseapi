@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+	
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="4.5.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Voluntariese.Api.Dominio\Voluntariese.Api.Dominio.csproj" />
+    <ProjectReference Include="..\Voluntariese.Api.Infraestrutura\Voluntariese.Api.Infraestrutura.csproj" />
+    <ProjectReference Include="..\Voluntariese.Api.Repositorios\Voluntariese.Api.Repositorios.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Autenticacao\Models\" />
+    <Folder Include="Autenticacao\Requests\" />
+  </ItemGroup>
+
+</Project>

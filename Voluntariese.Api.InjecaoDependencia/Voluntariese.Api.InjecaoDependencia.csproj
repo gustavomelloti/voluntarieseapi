@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Voluntariese.Api.Aplicacao\Voluntariese.Api.Aplicacao.csproj" />
+    <ProjectReference Include="..\Voluntariese.Api.Dominio\Voluntariese.Api.Dominio.csproj" />
+    <ProjectReference Include="..\Voluntariese.Api.Infraestrutura\Voluntariese.Api.Infraestrutura.csproj" />
+    <ProjectReference Include="..\Voluntariese.Api.Repositorios\Voluntariese.Api.Repositorios.csproj" />
+  </ItemGroup>
+
+</Project>

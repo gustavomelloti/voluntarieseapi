@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[PerfilUsuario]
+(
+	[Id] BIGINT NOT NULL PRIMARY KEY IDENTITY, 
+    [Nome] VARCHAR(100) NOT NULL, 
+    [Codigo] VARCHAR(20) NOT NULL UNIQUE
+)
